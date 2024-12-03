@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\pietd\\documents\\github\\unreal-engine-capstone\\sandbox\\source\\sandbox\\mygamemodebase.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\pietd\\documents\\github\\unreal-engine-capstone\\sandbox\\intermediate\\build\\win64\\x64\\sandboxeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderunreal5_3.h.pch",
+        "Includes": [
+            "c:\\users\\pietd\\documents\\github\\unreal-engine-capstone\\sandbox\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\sandbox\\definitions.sandbox.h",
+            "c:\\users\\pietd\\documents\\github\\unreal-engine-capstone\\sandbox\\source\\sandbox\\mygamemodebase.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "c:\\users\\pietd\\documents\\github\\unreal-engine-capstone\\sandbox\\intermediate\\build\\win64\\unrealeditor\\inc\\sandbox\\uht\\mygamemodebase.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

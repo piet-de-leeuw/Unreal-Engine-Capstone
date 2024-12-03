@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\SandBox.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\SandBox.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\SandBoxEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <None Include="..\..\Input Backup 2023-08-03 170723.ini" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Config\HoloLens">
+      <UniqueIdentifier>{4C8DD267-CDE7-336F-8602-F5F485D22BAB}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\HoloLens\HoloLensEngine.ini">
+      <Filter>Config\HoloLens</Filter>
+    </None>
+    <Filter Include="Source\SandBox">
+      <UniqueIdentifier>{0A92B139-7AE1-3A73-AAC4-3B3E8993C3EB}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SandBox\MyGameHUD.cpp">
+      <Filter>Source\SandBox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SandBox\MyGameHUD.h">
+      <Filter>Source\SandBox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SandBox\MyGameModeBase.cpp">
+      <Filter>Source\SandBox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SandBox\MyGameModeBase.h">
+      <Filter>Source\SandBox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SandBox\MyPlayer.cpp">
+      <Filter>Source\SandBox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SandBox\MyPlayer.h">
+      <Filter>Source\SandBox</Filter>
+    </ClCompile>
+    <None Include="..\..\Source\SandBox\SandBox.Build.cs">
+      <Filter>Source\SandBox</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\SandBox\SandBox.cpp">
+      <Filter>Source\SandBox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SandBox\SandBox.h">
+      <Filter>Source\SandBox</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

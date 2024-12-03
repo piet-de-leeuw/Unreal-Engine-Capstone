@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\Users\\pietd\\Documents\\GitHub\\Unreal-Engine-Capstone\\SandBox\\Source\\SandBox\\SandBox.Build.cs",
+		"C:\\Users\\pietd\\Documents\\GitHub\\Unreal-Engine-Capstone\\SandBox\\Source\\SandBox.Target.cs",
+		"C:\\Users\\pietd\\Documents\\GitHub\\Unreal-Engine-Capstone\\SandBox\\Source\\SandBoxEditor.Target.cs"
+	],
+	"EngineVersion": "5.5.0"
+}

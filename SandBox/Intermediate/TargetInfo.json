@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "SandBox",
+			"Path": "..\\Source\\SandBox.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "SandBoxEditor",
+			"Path": "..\\Source\\SandBoxEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

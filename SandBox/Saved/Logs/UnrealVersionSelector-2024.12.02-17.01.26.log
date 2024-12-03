@@ -1,0 +1,19 @@
+Log started at 12/02/2024 17:01:26 (2024-12-02T16:01:26Z)
+No config file at C:\ProgramData\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
+No config file at C:\Users\pietd\AppData\Local\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
+No config file at C:\Users\pietd\OneDrive\Documenten\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
+Configuration will be read from:
+  C:\Users\pietd\AppData\Roaming\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
+Log file: C:\Users\pietd\Documents\GitHub\Unreal-Engine-Capstone\SandBox\Saved\Logs\UnrealVersionSelector-2024.12.02-17.01.26.log
+
+Setting temp directory to 'C:\Users\pietd\AppData\Local\Temp\UnrealBuildTool\f2d894e7'
+A conflicting instance of UnrealBuildTool is already running.
+BuildException: A conflicting instance of UnrealBuildTool is already running.
+   at UnrealBuildTool.SingleInstanceMutex..ctor(String MutexName, Boolean bWaitMutex) in C:\Program Files\Epic Games\UE_5.5\Engine\Source\Programs\UnrealBuildTool\System\SingleInstanceMutex.cs:line 45
+   at UnrealBuildTool.UnrealBuildTool.Main(String[] ArgumentsArray) in C:\Program Files\Epic Games\UE_5.5\Engine\Source\Programs\UnrealBuildTool\UnrealBuildTool.cs:line 652
+WriteFileIfChanged() wrote 0 changed files of 0 requested writes.
+Timeline:
+
+[ 0.000]
+[ 0.000](+0.288) <unknown>
+[ 0.288]
