@@ -285,6 +285,7 @@
 /I "Editor\SceneDepthPickerMode\Public"
 /I "..\Intermediate\Build\Win64\UnrealEditor\Inc\AnimationEditMode\UHT"
 /I "Editor\AnimationEditMode\Public"
+/I "C:\Users\pietd\Documents\GitHub\Unreal-Engine-Capstone\SandBox\Intermediate\Build\Win64\UnrealEditor\Inc\SandBox\UHT"
 /I "C:\Users\pietd\Documents\GitHub\Unreal-Engine-Capstone\SandBox\Source"
 /external:W0
 /external:I "ThirdParty\GuidelinesSupportLibrary\GSL-1144\include"

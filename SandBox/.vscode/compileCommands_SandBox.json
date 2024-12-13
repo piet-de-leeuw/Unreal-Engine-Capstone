@@ -1,0 +1,74 @@
+[
+	{
+		"file": "C:\\Users\\pietd\\Documents\\GitHub\\Unreal-Engine-Capstone\\SandBox\\Source\\SandBox\\MyGameHUD.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\pietd\\Documents\\GitHub\\Unreal-Engine-Capstone\\SandBox\\.vscode\\compileCommands_SandBox\\SandBox.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\pietd\\Documents\\GitHub\\Unreal-Engine-Capstone\\SandBox\\Source\\SandBox\\MyGameHUD.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\pietd\\Documents\\GitHub\\Unreal-Engine-Capstone\\SandBox\\.vscode\\compileCommands_SandBox\\SandBox.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\pietd\\Documents\\GitHub\\Unreal-Engine-Capstone\\SandBox\\Source\\SandBox\\MyGameModeBase.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\pietd\\Documents\\GitHub\\Unreal-Engine-Capstone\\SandBox\\.vscode\\compileCommands_SandBox\\SandBox.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\pietd\\Documents\\GitHub\\Unreal-Engine-Capstone\\SandBox\\Source\\SandBox\\MyGameModeBase.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\pietd\\Documents\\GitHub\\Unreal-Engine-Capstone\\SandBox\\.vscode\\compileCommands_SandBox\\SandBox.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\pietd\\Documents\\GitHub\\Unreal-Engine-Capstone\\SandBox\\Source\\SandBox\\MyPlayer.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\pietd\\Documents\\GitHub\\Unreal-Engine-Capstone\\SandBox\\.vscode\\compileCommands_SandBox\\SandBox.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\pietd\\Documents\\GitHub\\Unreal-Engine-Capstone\\SandBox\\Source\\SandBox\\MyPlayer.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\pietd\\Documents\\GitHub\\Unreal-Engine-Capstone\\SandBox\\.vscode\\compileCommands_SandBox\\SandBox.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\pietd\\Documents\\GitHub\\Unreal-Engine-Capstone\\SandBox\\Source\\SandBox\\SandBox.Build.cs",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\pietd\\Documents\\GitHub\\Unreal-Engine-Capstone\\SandBox\\.vscode\\compileCommands_SandBox\\SandBox.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\pietd\\Documents\\GitHub\\Unreal-Engine-Capstone\\SandBox\\Source\\SandBox\\SandBox.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\pietd\\Documents\\GitHub\\Unreal-Engine-Capstone\\SandBox\\.vscode\\compileCommands_SandBox\\SandBox.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\pietd\\Documents\\GitHub\\Unreal-Engine-Capstone\\SandBox\\Source\\SandBox\\SandBox.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\pietd\\Documents\\GitHub\\Unreal-Engine-Capstone\\SandBox\\.vscode\\compileCommands_SandBox\\SandBox.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Source"
+	}
+]
