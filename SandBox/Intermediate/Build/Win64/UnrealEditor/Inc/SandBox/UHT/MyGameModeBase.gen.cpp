@@ -64,11 +64,17 @@ UFunction* Z_Construct_UFunction_AMyGameModeBase_UpdateLives()
 // End Class AMyGameModeBase Function UpdateLives
 
 // Begin Class AMyGameModeBase Function UpdateScore
-static const FName NAME_AMyGameModeBase_UpdateScore = FName(TEXT("UpdateScore"));
-void AMyGameModeBase::UpdateScore()
+struct MyGameModeBase_eventUpdateScore_Parms
 {
+	int32 Value;
+};
+static const FName NAME_AMyGameModeBase_UpdateScore = FName(TEXT("UpdateScore"));
+void AMyGameModeBase::UpdateScore(const int32 Value)
+{
+	MyGameModeBase_eventUpdateScore_Parms Parms;
+	Parms.Value=Value;
 	UFunction* Func = FindFunctionChecked(NAME_AMyGameModeBase_UpdateScore);
-	ProcessEvent(Func,NULL);
+	ProcessEvent(Func,&Parms);
 }
 struct Z_Construct_UFunction_AMyGameModeBase_UpdateScore_Statics
 {
@@ -77,10 +83,21 @@ struct Z_Construct_UFunction_AMyGameModeBase_UpdateScore_Statics
 		{ "Category", "Score" },
 		{ "ModuleRelativePath", "MyGameModeBase.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Value_MetaData[] = {
+		{ "NativeConst", "" },
+	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FIntPropertyParams NewProp_Value;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMyGameModeBase_UpdateScore_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMyGameModeBase, nullptr, "UpdateScore", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x0C020800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AMyGameModeBase_UpdateScore_Statics::Function_MetaDataParams), Z_Construct_UFunction_AMyGameModeBase_UpdateScore_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_AMyGameModeBase_UpdateScore_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(MyGameModeBase_eventUpdateScore_Parms, Value), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Value_MetaData), NewProp_Value_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMyGameModeBase_UpdateScore_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyGameModeBase_UpdateScore_Statics::NewProp_Value,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AMyGameModeBase_UpdateScore_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMyGameModeBase_UpdateScore_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMyGameModeBase, nullptr, "UpdateScore", nullptr, nullptr, Z_Construct_UFunction_AMyGameModeBase_UpdateScore_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyGameModeBase_UpdateScore_Statics::PropPointers), sizeof(MyGameModeBase_eventUpdateScore_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x0C020800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AMyGameModeBase_UpdateScore_Statics::Function_MetaDataParams), Z_Construct_UFunction_AMyGameModeBase_UpdateScore_Statics::Function_MetaDataParams) };
+static_assert(sizeof(MyGameModeBase_eventUpdateScore_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_AMyGameModeBase_UpdateScore()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -134,7 +151,7 @@ struct Z_Construct_UClass_AMyGameModeBase_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_AMyGameModeBase_UpdateLives, "UpdateLives" }, // 186880746
-		{ &Z_Construct_UFunction_AMyGameModeBase_UpdateScore, "UpdateScore" }, // 503205970
+		{ &Z_Construct_UFunction_AMyGameModeBase_UpdateScore, "UpdateScore" }, // 466891248
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -192,10 +209,10 @@ AMyGameModeBase::~AMyGameModeBase() {}
 struct Z_CompiledInDeferFile_FID_Users_pietd_Documents_GitHub_Unreal_Engine_Capstone_SandBox_Source_SandBox_MyGameModeBase_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMyGameModeBase, AMyGameModeBase::StaticClass, TEXT("AMyGameModeBase"), &Z_Registration_Info_UClass_AMyGameModeBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyGameModeBase), 2484852906U) },
+		{ Z_Construct_UClass_AMyGameModeBase, AMyGameModeBase::StaticClass, TEXT("AMyGameModeBase"), &Z_Registration_Info_UClass_AMyGameModeBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyGameModeBase), 1021214629U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_pietd_Documents_GitHub_Unreal_Engine_Capstone_SandBox_Source_SandBox_MyGameModeBase_h_2194988772(TEXT("/Script/SandBox"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_pietd_Documents_GitHub_Unreal_Engine_Capstone_SandBox_Source_SandBox_MyGameModeBase_h_3187997837(TEXT("/Script/SandBox"),
 	Z_CompiledInDeferFile_FID_Users_pietd_Documents_GitHub_Unreal_Engine_Capstone_SandBox_Source_SandBox_MyGameModeBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_pietd_Documents_GitHub_Unreal_Engine_Capstone_SandBox_Source_SandBox_MyGameModeBase_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

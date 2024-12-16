@@ -19,3 +19,9 @@ AMyDiamond::AMyDiamond()
 
 }
 
+void AMyDiamond::BeginPlay()
+{
+	Super::BeginPlay();
+
+}
+

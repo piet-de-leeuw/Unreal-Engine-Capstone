@@ -36,11 +36,13 @@ void AMyPlayer::BeginPlay()
 {
 	Super::BeginPlay();
 
+
+
+
 	HitBoxGround->OnComponentHit.AddDynamic(this, &AMyPlayer::HitGround);
 	
 	if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
 	{
-		BoxCollider->BodyInstance.bLockZRotation = true;
 
 		if (UEnhancedInputLocalPlayerSubsystem* SubSystem = 
 			ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer()))
@@ -92,6 +94,7 @@ void AMyPlayer::HitGround(UPrimitiveComponent* HitComponent, AActor* OtherActor,
 void AMyPlayer::UpdateRotation( FRotator RRotation, float DeltaTime)
 {
 	if (!IsRotating) { return; }
+
 	
 	float RotationStepAmount = 250 * DeltaTime;
 	// Making shure AmountToRotate doesn't go below 0. 
@@ -116,8 +119,11 @@ void AMyPlayer::UpdateRotation( FRotator RRotation, float DeltaTime)
 		SetActorRotation(Rotation);
 		// Deactivates this function.
 		IsRotating = false;
+
+
 		// Reset Amount to rotate to default value.
 		AmountToRotate = 90;
+
 	}
 }
 

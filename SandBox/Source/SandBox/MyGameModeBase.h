@@ -18,7 +18,7 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Health")
 	void UpdateLives(const float Damage);
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Score")
-	void UpdateScore();
+	void UpdateScore(const int Value);
 	
 private:
 	UPROPERTY(BlueprintReadWrite, Category = "Reference", meta = (AllowPrivateAccess = true))
