@@ -39,6 +39,12 @@
     <Filter Include="Source\SandBox">
       <UniqueIdentifier>{0A92B139-7AE1-3A73-AAC4-3B3E8993C3EB}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\SandBox\MyDiamond.cpp">
+      <Filter>Source\SandBox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SandBox\MyDiamond.h">
+      <Filter>Source\SandBox</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\SandBox\MyGameHUD.cpp">
       <Filter>Source\SandBox</Filter>
     </ClCompile>

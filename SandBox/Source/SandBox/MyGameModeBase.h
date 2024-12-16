@@ -13,14 +13,18 @@ UCLASS()
 class SANDBOX_API AMyGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
+
+public:
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Health")
+	void UpdateLives(const float Damage);
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Score")
+	void UpdateScore();
 	
-protected:
-	UPROPERTY(BlueprintReadWrite, Category = "Reference", meta = (BlueprintProtected))
-	AMyPlayer* PlayerRef;
-	UPROPERTY(BlueprintReadWrite, Category = "Reference", meta = (BlueprintProtected))
+private:
+	UPROPERTY(BlueprintReadWrite, Category = "Reference", meta = (AllowPrivateAccess = true))
 	UMyGameHUD* GameHUDRef;
-	UPROPERTY(BlueprintReadWrite, Category = "Lives", meta = (BlueprintProtected))
-	int Lives = 3;
-	UPROPERTY(BlueprintReadWrite, Category = "Score", meta = (BlueprintProtected))
+	UPROPERTY(BlueprintReadWrite, Category = "Health", meta = (AllowPrivateAccess = true))
+	int Lives = 4;
+	UPROPERTY(BlueprintReadWrite, Category = "Score", meta = (AllowPrivateAccess = true))
 	int Score = 0;
 };

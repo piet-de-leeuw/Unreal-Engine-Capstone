@@ -2,7 +2,7 @@
 
 
 #include "MyPlayer.h"
-#include "DrawDebugHelpers.h"
+
 
 // Sets default values
 AMyPlayer::AMyPlayer()

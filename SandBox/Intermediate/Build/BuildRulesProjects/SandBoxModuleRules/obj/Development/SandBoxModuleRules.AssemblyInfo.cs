@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SandBoxModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6bc75208239fc12f5b4fcd86e32a8165f6b2ebd1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+24c052109a1576b2e949205d9e2757f1b99d72de")]
 [assembly: System.Reflection.AssemblyProductAttribute("SandBoxModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SandBoxModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

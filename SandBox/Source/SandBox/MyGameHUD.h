@@ -13,5 +13,11 @@ UCLASS()
 class SANDBOX_API UMyGameHUD : public UUserWidget
 {
 	GENERATED_BODY()
-	
+
+public:
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "UpdateHUD")
+	void UpdateHUDLives(const int Lives);
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "UpdateHUD")
+	void UpdateHUDScore(const int score);
+
 };

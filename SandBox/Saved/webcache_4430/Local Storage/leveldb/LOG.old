@@ -1,2 +1,3 @@
-2024/12/02-12:26:13.710 29d8 Creating DB C:/Users/pietd/Documents/GitHub/Unreal-Engine-Capstone/SandBox/Saved/webcache_4430\Local Storage\leveldb since it was missing.
-2024/12/02-12:26:13.727 29d8 Reusing MANIFEST C:/Users/pietd/Documents/GitHub/Unreal-Engine-Capstone/SandBox/Saved/webcache_4430\Local Storage\leveldb/MANIFEST-000001
+2024/12/03-14:43:11.347 2590 Reusing MANIFEST C:/Users/pietd/Documents/GitHub/Unreal-Engine-Capstone/SandBox/Saved/webcache_4430\Local Storage\leveldb/MANIFEST-000001
+2024/12/03-14:43:11.355 2590 Recovering log #3
+2024/12/03-14:43:11.356 2590 Reusing old log C:/Users/pietd/Documents/GitHub/Unreal-Engine-Capstone/SandBox/Saved/webcache_4430\Local Storage\leveldb/000003.log 

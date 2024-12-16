@@ -19,6 +19,7 @@
 
 #include "MyPlayer.generated.h"
 
+class AMyGameModeBase;
 
 UCLASS()
 class SANDBOX_API AMyPlayer : public APawn
@@ -56,7 +57,8 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "References", meta = (BlueprintProtected))
+	AMyGameModeBase* GameModeRef;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Collision", meta = (BlueprintProtected))
 	UBoxComponent* BoxCollider;
@@ -94,7 +96,6 @@ protected:
 	void UpdateRotation( FRotator Rotation, float DeltaTime);
 	void RotateCW();
 	void RotateCCW();
-	float GetRotationReference();
 	float AmountToRotate = 90;
 	FRotator Rotation;
 	
