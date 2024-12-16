@@ -36,8 +36,9 @@ void AMyPlayer::BeginPlay()
 {
 	Super::BeginPlay();
 
-
-
+	//Lock z rotation.
+	BoxCollider->GetBodyInstance()->bLockZRotation = true;
+	BoxCollider->GetBodyInstance()->SetDOFLock(EDOFMode::SixDOF);
 
 	HitBoxGround->OnComponentHit.AddDynamic(this, &AMyPlayer::HitGround);
 	
@@ -95,6 +96,9 @@ void AMyPlayer::UpdateRotation( FRotator RRotation, float DeltaTime)
 {
 	if (!IsRotating) { return; }
 
+	//Unlock z rotation.
+	BoxCollider->GetBodyInstance()->bLockZRotation = false;
+	BoxCollider->GetBodyInstance()->SetDOFLock(EDOFMode::SixDOF);
 	
 	float RotationStepAmount = 250 * DeltaTime;
 	// Making shure AmountToRotate doesn't go below 0. 
@@ -120,6 +124,9 @@ void AMyPlayer::UpdateRotation( FRotator RRotation, float DeltaTime)
 		// Deactivates this function.
 		IsRotating = false;
 
+		//Relock z rotation.
+		BoxCollider->GetBodyInstance()->bLockZRotation = true;
+		BoxCollider->GetBodyInstance()->SetDOFLock(EDOFMode::SixDOF);
 
 		// Reset Amount to rotate to default value.
 		AmountToRotate = 90;
