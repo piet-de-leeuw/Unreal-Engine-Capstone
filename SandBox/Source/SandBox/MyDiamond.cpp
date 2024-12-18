@@ -25,3 +25,8 @@ void AMyDiamond::BeginPlay()
 
 }
 
+void AMyDiamond::Interact(AMyPlayer* Player)
+{
+	PickupDiamond(Player);
+}
+

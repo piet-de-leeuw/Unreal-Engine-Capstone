@@ -17,11 +17,12 @@ struct FHitResult;
 #endif
 #define SANDBOX_MyPlayer_generated_h
 
-#define FID_Users_pietd_Documents_GitHub_Unreal_Engine_Capstone_SandBox_Source_SandBox_MyPlayer_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execHitGround);
+#define FID_Users_pietd_Documents_GitHub_Unreal_Engine_Capstone_SandBox_Source_SandBox_MyPlayer_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execHitGround); \
+	DECLARE_FUNCTION(execOnOverlapBegin);
 
 
-#define FID_Users_pietd_Documents_GitHub_Unreal_Engine_Capstone_SandBox_Source_SandBox_MyPlayer_h_27_INCLASS_NO_PURE_DECLS \
+#define FID_Users_pietd_Documents_GitHub_Unreal_Engine_Capstone_SandBox_Source_SandBox_MyPlayer_h_25_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMyPlayer(); \
 	friend struct Z_Construct_UClass_AMyPlayer_Statics; \
@@ -30,7 +31,7 @@ public: \
 	DECLARE_SERIALIZER(AMyPlayer)
 
 
-#define FID_Users_pietd_Documents_GitHub_Unreal_Engine_Capstone_SandBox_Source_SandBox_MyPlayer_h_27_ENHANCED_CONSTRUCTORS \
+#define FID_Users_pietd_Documents_GitHub_Unreal_Engine_Capstone_SandBox_Source_SandBox_MyPlayer_h_25_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AMyPlayer(AMyPlayer&&); \
@@ -42,13 +43,13 @@ public: \
 	NO_API virtual ~AMyPlayer();
 
 
-#define FID_Users_pietd_Documents_GitHub_Unreal_Engine_Capstone_SandBox_Source_SandBox_MyPlayer_h_24_PROLOG
-#define FID_Users_pietd_Documents_GitHub_Unreal_Engine_Capstone_SandBox_Source_SandBox_MyPlayer_h_27_GENERATED_BODY \
+#define FID_Users_pietd_Documents_GitHub_Unreal_Engine_Capstone_SandBox_Source_SandBox_MyPlayer_h_22_PROLOG
+#define FID_Users_pietd_Documents_GitHub_Unreal_Engine_Capstone_SandBox_Source_SandBox_MyPlayer_h_25_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_pietd_Documents_GitHub_Unreal_Engine_Capstone_SandBox_Source_SandBox_MyPlayer_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_pietd_Documents_GitHub_Unreal_Engine_Capstone_SandBox_Source_SandBox_MyPlayer_h_27_INCLASS_NO_PURE_DECLS \
-	FID_Users_pietd_Documents_GitHub_Unreal_Engine_Capstone_SandBox_Source_SandBox_MyPlayer_h_27_ENHANCED_CONSTRUCTORS \
+	FID_Users_pietd_Documents_GitHub_Unreal_Engine_Capstone_SandBox_Source_SandBox_MyPlayer_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_pietd_Documents_GitHub_Unreal_Engine_Capstone_SandBox_Source_SandBox_MyPlayer_h_25_INCLASS_NO_PURE_DECLS \
+	FID_Users_pietd_Documents_GitHub_Unreal_Engine_Capstone_SandBox_Source_SandBox_MyPlayer_h_25_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

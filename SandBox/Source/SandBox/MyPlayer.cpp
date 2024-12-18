@@ -2,7 +2,15 @@
 
 
 #include "MyPlayer.h"
-
+#include "Interact.h"
+#include "Components/BoxComponent.h"
+#include "Components/StaticMeshComponent.h"
+#include "EnhancedInputSubsystems.h"
+#include "InputActionValue.h"
+#include "EnhancedInputComponent.h"
+#include "Engine/LocalPlayer.h"
+#include "GameFramework/SpringArmComponent.h"
+#include "Camera/CameraComponent.h"
 
 // Sets default values
 AMyPlayer::AMyPlayer()
@@ -15,7 +23,6 @@ AMyPlayer::AMyPlayer()
 
 	HitBoxGround = CreateDefaultSubobject<UBoxComponent>(TEXT("HitBoxGround"));
 	HitBoxGround->SetupAttachment(RootComponent);
-
 
 	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Body"));
 	Mesh->SetupAttachment(RootComponent);
@@ -41,15 +48,24 @@ void AMyPlayer::BeginPlay()
 	BoxCollider->GetBodyInstance()->SetDOFLock(EDOFMode::SixDOF);
 
 	HitBoxGround->OnComponentHit.AddDynamic(this, &AMyPlayer::HitGround);
+	BoxCollider->OnComponentBeginOverlap.AddDynamic(this, &AMyPlayer::OnOverlapBegin);
 	
 	if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
 	{
-
 		if (UEnhancedInputLocalPlayerSubsystem* SubSystem = 
 			ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer()))
 		{
 			SubSystem->AddMappingContext(DefaultMappingContext, 0);
 		}
+	}
+}
+
+void AMyPlayer::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
+	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	if (IInteract* Interact = Cast<IInteract>(OtherActor); Interact != nullptr)
+	{
+		Interact->Interact(this);
 	}
 }
 
@@ -136,6 +152,7 @@ void AMyPlayer::UpdateRotation( FRotator RRotation, float DeltaTime)
 
 void AMyPlayer::RotateCW()
 {
+	if (Is2DMode) { return; }
 	// Set Rotation Direction
 	IsRotationCCW = false;
 	// Set Startpoint for the rotation
@@ -147,12 +164,50 @@ void AMyPlayer::RotateCW()
 
 void AMyPlayer::RotateCCW()
 {
+	if (Is2DMode) { return; }
 	// Set Rotation Direction
 	IsRotationCCW = true;
 	// Set Startpoint for the rotation
 	Rotation = GetActorRotation();
 	// Activates the code in UpdateRotation.
 	IsRotating = true;
+}
+
+void AMyPlayer::Toggel2DMode(FVector NewLocation, FRotator NewRotation)
+{
+	Is2DMode = !Is2DMode;
+
+	FVector Distance;
+
+	bool BlockY;
+	if (int(NewRotation.Yaw) == 90 || int(NewRotation.Yaw) == -90) { BlockY = true; }
+	else { BlockY = false; }
+
+
+	if (Is2DMode)
+	{
+
+		Distance = FVector(2.1, 0, 0);
+		SetActorRotation(FRotator(NewRotation.Pitch, NewRotation.Yaw - 180, NewRotation.Roll));
+		SetActorLocation(NewLocation + NewRotation.RotateVector(Distance));
+		
+		if(BlockY) { BoxCollider->GetBodyInstance()->bLockYTranslation = true; }
+		else { BoxCollider->GetBodyInstance()->bLockXTranslation = true; }
+		BoxCollider->GetBodyInstance()->SetDOFLock(EDOFMode::SixDOF);
+
+		SetActorScale3D(FVector(0.1, 0.25, 0.25));
+	}
+	else
+	{
+		Distance = FVector(0, 0, 10);
+
+		if (BlockY) { BoxCollider->GetBodyInstance()->bLockYTranslation = false; }
+		else { BoxCollider->GetBodyInstance()->bLockXTranslation = false; }
+		BoxCollider->GetBodyInstance()->SetDOFLock(EDOFMode::SixDOF);
+
+		SetActorLocation(NewLocation + NewRotation.RotateVector(Distance));
+		SetActorScale3D(FVector(0.5, 0.5, 0.5));
+	}
 }
 
 // Called to bind functionality to input
@@ -166,6 +221,7 @@ void AMyPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 		EnhancedInputComponent->BindAction(RotateInputCW, ETriggerEvent::Completed, this, &AMyPlayer::RotateCW);
 		EnhancedInputComponent->BindAction(RotateInputCCW, ETriggerEvent::Completed, this, &AMyPlayer::RotateCCW);
 		EnhancedInputComponent->BindAction(JumpInput, ETriggerEvent::Completed, this, &AMyPlayer::Jump);
+		//EnhancedInputComponent->BindAction(InteractInput, ETriggerEvent::Completed, this, &IInteract::Interact);
 	}
 
 }

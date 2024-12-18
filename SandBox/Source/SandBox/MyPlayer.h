@@ -6,20 +6,18 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
 
-#include "Components/BoxComponent.h"
-#include "Components/StaticMeshComponent.h"
-#include "EnhancedInputSubsystems.h"
-#include "InputActionValue.h"
-#include "EnhancedInputComponent.h"
-#include "Engine/LocalPlayer.h"
-#include "GameFramework/SpringArmComponent.h"
-#include "Camera/CameraComponent.h"
 #include "GameFramework/FloatingPawnMovement.h"
-#include "Misc/App.h"
 
 #include "MyPlayer.generated.h"
 
 class AMyGameModeBase;
+class UBoxComponent;
+class UStaticMeshComponen;
+class USpringArmComponent;
+class UCameraComponent;
+class UInputMappingContext;
+class UInputAction;
+struct FInputActionValue;
 
 UCLASS()
 class SANDBOX_API AMyPlayer : public APawn
@@ -50,12 +48,21 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input", meta = (AllowPrivateAccess = true))
 	UInputAction* JumpInput;
-
 	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input", meta = (AllowPrivateAccess = true))
+	UInputAction* InteractInput;
+
+	void Toggel2DMode(FVector NewLocation, FRotator NewRotation);
+
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+	UFUNCTION()
+	void OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
+		UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "References", meta = (BlueprintProtected))
 	AMyGameModeBase* GameModeRef;
@@ -99,5 +106,6 @@ protected:
 	float AmountToRotate = 90;
 	FRotator Rotation;
 	
+	bool Is2DMode = false;
 
 };

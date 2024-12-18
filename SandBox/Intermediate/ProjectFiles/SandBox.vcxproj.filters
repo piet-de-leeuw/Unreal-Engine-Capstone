@@ -39,6 +39,18 @@
     <Filter Include="Source\SandBox">
       <UniqueIdentifier>{0A92B139-7AE1-3A73-AAC4-3B3E8993C3EB}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\SandBox\Interact.cpp">
+      <Filter>Source\SandBox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SandBox\Interact.h">
+      <Filter>Source\SandBox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SandBox\My2DModeSwitch.cpp">
+      <Filter>Source\SandBox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SandBox\My2DModeSwitch.h">
+      <Filter>Source\SandBox</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\SandBox\MyDiamond.cpp">
       <Filter>Source\SandBox</Filter>
     </ClCompile>

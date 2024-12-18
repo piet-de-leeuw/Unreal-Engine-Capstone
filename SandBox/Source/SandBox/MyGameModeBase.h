@@ -24,7 +24,7 @@ private:
 	UPROPERTY(BlueprintReadWrite, Category = "Reference", meta = (AllowPrivateAccess = true))
 	UMyGameHUD* GameHUDRef;
 	UPROPERTY(BlueprintReadWrite, Category = "Health", meta = (AllowPrivateAccess = true))
-	int Lives = 4;
+	int Lives = 7;
 	UPROPERTY(BlueprintReadWrite, Category = "Score", meta = (AllowPrivateAccess = true))
 	int Score = 0;
 };

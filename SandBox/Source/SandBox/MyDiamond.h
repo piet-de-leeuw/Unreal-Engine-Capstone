@@ -7,11 +7,12 @@
 
 #include "Components/SphereComponent.h"
 #include "Components/StaticMeshComponent.h"
+#include "interact.h"
 
 #include "MyDiamond.generated.h"
 
 UCLASS()
-class SANDBOX_API AMyDiamond : public AActor
+class SANDBOX_API AMyDiamond : public AActor, public IInteract
 {
 	GENERATED_BODY()
 	
@@ -23,6 +24,11 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	virtual void Interact(AMyPlayer* Player) override;
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
+	void PickupDiamond(AMyPlayer* Player);
+
 private:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Colliders", meta = (AllowPrivateAccess = true))
 	USphereComponent* SphereCollider;
@@ -32,5 +38,7 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Score", meta = (AllowPrivateAccess))
 	int Value = 25;
+
+
 
 };
