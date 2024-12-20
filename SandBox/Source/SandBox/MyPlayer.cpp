@@ -63,6 +63,7 @@ void AMyPlayer::BeginPlay()
 void AMyPlayer::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
 	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
+	// Check if OtherActor implements Interface IInteract.
 	if (IInteract* Interact = Cast<IInteract>(OtherActor); Interact != nullptr)
 	{
 		Interact->Interact(this);
@@ -177,20 +178,20 @@ void AMyPlayer::Toggel2DMode(FVector NewLocation, FRotator NewRotation)
 {
 	Is2DMode = !Is2DMode;
 
-	FVector Distance;
-
+	//Determine in which direction movement should be blocked.
 	bool BlockY;
 	if (int(NewRotation.Yaw) == 90 || int(NewRotation.Yaw) == -90) { BlockY = true; }
 	else { BlockY = false; }
 
-
 	if (Is2DMode)
 	{
-
-		Distance = FVector(2.1, 0, 0);
+		//offset for NewLocation
+		FVector Distance = FVector(2.1, 0, 0);
+		//Make sure we face the right direction.
 		SetActorRotation(FRotator(NewRotation.Pitch, NewRotation.Yaw - 180, NewRotation.Roll));
+		//Make shure we have the right location after scale
 		SetActorLocation(NewLocation + NewRotation.RotateVector(Distance));
-		
+		//Lock movment to a 2D plane.
 		if(BlockY) { BoxCollider->GetBodyInstance()->bLockYTranslation = true; }
 		else { BoxCollider->GetBodyInstance()->bLockXTranslation = true; }
 		BoxCollider->GetBodyInstance()->SetDOFLock(EDOFMode::SixDOF);
@@ -199,12 +200,13 @@ void AMyPlayer::Toggel2DMode(FVector NewLocation, FRotator NewRotation)
 	}
 	else
 	{
-		Distance = FVector(0, 0, 10);
-
+		//offset for NewLocation
+		FVector Distance = FVector(0, 0, 10);
+		//Unlock movment to a 2D plane.
 		if (BlockY) { BoxCollider->GetBodyInstance()->bLockYTranslation = false; }
 		else { BoxCollider->GetBodyInstance()->bLockXTranslation = false; }
 		BoxCollider->GetBodyInstance()->SetDOFLock(EDOFMode::SixDOF);
-
+		//Make shure we have the right location after scale
 		SetActorLocation(NewLocation + NewRotation.RotateVector(Distance));
 		SetActorScale3D(FVector(0.5, 0.5, 0.5));
 	}
@@ -221,7 +223,6 @@ void AMyPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 		EnhancedInputComponent->BindAction(RotateInputCW, ETriggerEvent::Completed, this, &AMyPlayer::RotateCW);
 		EnhancedInputComponent->BindAction(RotateInputCCW, ETriggerEvent::Completed, this, &AMyPlayer::RotateCCW);
 		EnhancedInputComponent->BindAction(JumpInput, ETriggerEvent::Completed, this, &AMyPlayer::Jump);
-		//EnhancedInputComponent->BindAction(InteractInput, ETriggerEvent::Completed, this, &IInteract::Interact);
 	}
 
 }

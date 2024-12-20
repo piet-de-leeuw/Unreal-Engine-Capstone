@@ -33,7 +33,7 @@ private:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Colliders", meta = (AllowPrivateAccess = true))
 	USphereComponent* SphereCollider;
 
-	UPROPERTY(EditAnywhere, Category = "Mesh", meta = (AllowPrivateAccess = true))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Mesh", meta = (AllowPrivateAccess = true))
 	UStaticMeshComponent* Mesh;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Score", meta = (AllowPrivateAccess))

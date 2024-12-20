@@ -23,8 +23,6 @@ void AMy2DModeSwitch::Interact(AMyPlayer* Player)
 	FVector SwitchLocation = GetActorLocation();
 	FRotator SwitchRotation = GetActorRotation();
 
-
-
 	Player->Toggel2DMode(SwitchLocation, SwitchRotation);
 }
 

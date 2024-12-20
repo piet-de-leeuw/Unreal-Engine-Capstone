@@ -27,6 +27,7 @@ void AMyDiamond::BeginPlay()
 
 void AMyDiamond::Interact(AMyPlayer* Player)
 {
+	//Inplemented in Blueprints
 	PickupDiamond(Player);
 }
 

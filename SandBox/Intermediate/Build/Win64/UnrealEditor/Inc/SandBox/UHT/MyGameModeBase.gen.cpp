@@ -13,9 +13,85 @@ void EmptyLinkFunctionForGeneratedCodeMyGameModeBase() {}
 ENGINE_API UClass* Z_Construct_UClass_AGameModeBase();
 SANDBOX_API UClass* Z_Construct_UClass_AMyGameModeBase();
 SANDBOX_API UClass* Z_Construct_UClass_AMyGameModeBase_NoRegister();
+SANDBOX_API UClass* Z_Construct_UClass_AMyPlayer_NoRegister();
 SANDBOX_API UClass* Z_Construct_UClass_UMyGameHUD_NoRegister();
+UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 UPackage* Z_Construct_UPackage__Script_SandBox();
 // End Cross Module References
+
+// Begin Class AMyGameModeBase Function AddRemoveUI
+struct MyGameModeBase_eventAddRemoveUI_Parms
+{
+	bool ShowMouseCursor;
+	bool DisableInput;
+	UUserWidget* RemoveWidget;
+	UUserWidget* AddWidget;
+};
+static const FName NAME_AMyGameModeBase_AddRemoveUI = FName(TEXT("AddRemoveUI"));
+void AMyGameModeBase::AddRemoveUI(bool ShowMouseCursor, bool DisableInput, UUserWidget* RemoveWidget, UUserWidget* AddWidget)
+{
+	MyGameModeBase_eventAddRemoveUI_Parms Parms;
+	Parms.ShowMouseCursor=ShowMouseCursor ? true : false;
+	Parms.DisableInput=DisableInput ? true : false;
+	Parms.RemoveWidget=RemoveWidget;
+	Parms.AddWidget=AddWidget;
+	UFunction* Func = FindFunctionChecked(NAME_AMyGameModeBase_AddRemoveUI);
+	ProcessEvent(Func,&Parms);
+}
+struct Z_Construct_UFunction_AMyGameModeBase_AddRemoveUI_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "UI" },
+		{ "ModuleRelativePath", "MyGameModeBase.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RemoveWidget_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AddWidget_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif // WITH_METADATA
+	static void NewProp_ShowMouseCursor_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_ShowMouseCursor;
+	static void NewProp_DisableInput_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_DisableInput;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_RemoveWidget;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_AddWidget;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+void Z_Construct_UFunction_AMyGameModeBase_AddRemoveUI_Statics::NewProp_ShowMouseCursor_SetBit(void* Obj)
+{
+	((MyGameModeBase_eventAddRemoveUI_Parms*)Obj)->ShowMouseCursor = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_AMyGameModeBase_AddRemoveUI_Statics::NewProp_ShowMouseCursor = { "ShowMouseCursor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(MyGameModeBase_eventAddRemoveUI_Parms), &Z_Construct_UFunction_AMyGameModeBase_AddRemoveUI_Statics::NewProp_ShowMouseCursor_SetBit, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_AMyGameModeBase_AddRemoveUI_Statics::NewProp_DisableInput_SetBit(void* Obj)
+{
+	((MyGameModeBase_eventAddRemoveUI_Parms*)Obj)->DisableInput = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_AMyGameModeBase_AddRemoveUI_Statics::NewProp_DisableInput = { "DisableInput", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(MyGameModeBase_eventAddRemoveUI_Parms), &Z_Construct_UFunction_AMyGameModeBase_AddRemoveUI_Statics::NewProp_DisableInput_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AMyGameModeBase_AddRemoveUI_Statics::NewProp_RemoveWidget = { "RemoveWidget", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(MyGameModeBase_eventAddRemoveUI_Parms, RemoveWidget), Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RemoveWidget_MetaData), NewProp_RemoveWidget_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AMyGameModeBase_AddRemoveUI_Statics::NewProp_AddWidget = { "AddWidget", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(MyGameModeBase_eventAddRemoveUI_Parms, AddWidget), Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AddWidget_MetaData), NewProp_AddWidget_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMyGameModeBase_AddRemoveUI_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyGameModeBase_AddRemoveUI_Statics::NewProp_ShowMouseCursor,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyGameModeBase_AddRemoveUI_Statics::NewProp_DisableInput,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyGameModeBase_AddRemoveUI_Statics::NewProp_RemoveWidget,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyGameModeBase_AddRemoveUI_Statics::NewProp_AddWidget,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AMyGameModeBase_AddRemoveUI_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMyGameModeBase_AddRemoveUI_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMyGameModeBase, nullptr, "AddRemoveUI", nullptr, nullptr, Z_Construct_UFunction_AMyGameModeBase_AddRemoveUI_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyGameModeBase_AddRemoveUI_Statics::PropPointers), sizeof(MyGameModeBase_eventAddRemoveUI_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x0C020800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AMyGameModeBase_AddRemoveUI_Statics::Function_MetaDataParams), Z_Construct_UFunction_AMyGameModeBase_AddRemoveUI_Statics::Function_MetaDataParams) };
+static_assert(sizeof(MyGameModeBase_eventAddRemoveUI_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_AMyGameModeBase_AddRemoveUI()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMyGameModeBase_AddRemoveUI_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+// End Class AMyGameModeBase Function AddRemoveUI
 
 // Begin Class AMyGameModeBase Function UpdateLives
 struct MyGameModeBase_eventUpdateLives_Parms
@@ -133,6 +209,23 @@ struct Z_Construct_UClass_AMyGameModeBase_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "MyGameModeBase.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MainMenuRef_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "Reference" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "MyGameModeBase.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_EndMenuRef_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "Reference" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "MyGameModeBase.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PlayerRef_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "Reference" },
+		{ "ModuleRelativePath", "MyGameModeBase.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Lives_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Health" },
@@ -145,11 +238,15 @@ struct Z_Construct_UClass_AMyGameModeBase_Statics
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_GameHUDRef;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_MainMenuRef;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_EndMenuRef;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_PlayerRef;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_Lives;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_Score;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_AMyGameModeBase_AddRemoveUI, "AddRemoveUI" }, // 3363711699
 		{ &Z_Construct_UFunction_AMyGameModeBase_UpdateLives, "UpdateLives" }, // 186880746
 		{ &Z_Construct_UFunction_AMyGameModeBase_UpdateScore, "UpdateScore" }, // 466891248
 	};
@@ -160,10 +257,16 @@ struct Z_Construct_UClass_AMyGameModeBase_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyGameModeBase_Statics::NewProp_GameHUDRef = { "GameHUDRef", nullptr, (EPropertyFlags)0x004000000008000c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyGameModeBase, GameHUDRef), Z_Construct_UClass_UMyGameHUD_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GameHUDRef_MetaData), NewProp_GameHUDRef_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyGameModeBase_Statics::NewProp_MainMenuRef = { "MainMenuRef", nullptr, (EPropertyFlags)0x004000000008000c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyGameModeBase, MainMenuRef), Z_Construct_UClass_UMyGameHUD_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MainMenuRef_MetaData), NewProp_MainMenuRef_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyGameModeBase_Statics::NewProp_EndMenuRef = { "EndMenuRef", nullptr, (EPropertyFlags)0x004000000008000c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyGameModeBase, EndMenuRef), Z_Construct_UClass_UMyGameHUD_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_EndMenuRef_MetaData), NewProp_EndMenuRef_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyGameModeBase_Statics::NewProp_PlayerRef = { "PlayerRef", nullptr, (EPropertyFlags)0x0040000000000004, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyGameModeBase, PlayerRef), Z_Construct_UClass_AMyPlayer_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PlayerRef_MetaData), NewProp_PlayerRef_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AMyGameModeBase_Statics::NewProp_Lives = { "Lives", nullptr, (EPropertyFlags)0x0040000000000004, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyGameModeBase, Lives), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Lives_MetaData), NewProp_Lives_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AMyGameModeBase_Statics::NewProp_Score = { "Score", nullptr, (EPropertyFlags)0x0040000000000004, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyGameModeBase, Score), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Score_MetaData), NewProp_Score_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMyGameModeBase_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyGameModeBase_Statics::NewProp_GameHUDRef,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyGameModeBase_Statics::NewProp_MainMenuRef,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyGameModeBase_Statics::NewProp_EndMenuRef,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyGameModeBase_Statics::NewProp_PlayerRef,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyGameModeBase_Statics::NewProp_Lives,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyGameModeBase_Statics::NewProp_Score,
 };
@@ -209,10 +312,10 @@ AMyGameModeBase::~AMyGameModeBase() {}
 struct Z_CompiledInDeferFile_FID_Users_pietd_Documents_GitHub_Unreal_Engine_Capstone_SandBox_Source_SandBox_MyGameModeBase_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMyGameModeBase, AMyGameModeBase::StaticClass, TEXT("AMyGameModeBase"), &Z_Registration_Info_UClass_AMyGameModeBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyGameModeBase), 1021214629U) },
+		{ Z_Construct_UClass_AMyGameModeBase, AMyGameModeBase::StaticClass, TEXT("AMyGameModeBase"), &Z_Registration_Info_UClass_AMyGameModeBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyGameModeBase), 3703746471U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_pietd_Documents_GitHub_Unreal_Engine_Capstone_SandBox_Source_SandBox_MyGameModeBase_h_3187997837(TEXT("/Script/SandBox"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_pietd_Documents_GitHub_Unreal_Engine_Capstone_SandBox_Source_SandBox_MyGameModeBase_h_1947851282(TEXT("/Script/SandBox"),
 	Z_CompiledInDeferFile_FID_Users_pietd_Documents_GitHub_Unreal_Engine_Capstone_SandBox_Source_SandBox_MyGameModeBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_pietd_Documents_GitHub_Unreal_Engine_Capstone_SandBox_Source_SandBox_MyGameModeBase_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

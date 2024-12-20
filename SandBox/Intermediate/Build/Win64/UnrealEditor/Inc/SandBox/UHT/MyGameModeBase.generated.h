@@ -9,6 +9,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UUserWidget;
 #ifdef SANDBOX_MyGameModeBase_generated_h
 #error "MyGameModeBase.generated.h already included, missing '#pragma once' in MyGameModeBase.h"
 #endif
