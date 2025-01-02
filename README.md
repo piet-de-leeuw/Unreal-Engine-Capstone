@@ -128,7 +128,7 @@ SetEndMenuText Function:
 
 LOGIC DISPLAYING SCORE:
 
-![Update Score.png](Images/UserStory-4/Update_Score.png)
+<img src="Images/UserStory-4/Update Score.png"/>
 
 ![GameOver-UpdateScore.png](Images/UserStory-4/GameOver-UpdateScore.png)
 
