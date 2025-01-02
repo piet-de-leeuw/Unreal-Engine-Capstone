@@ -7,6 +7,7 @@ The Project was setup to stimulate a real job project as much as possible. There
 - [User-Story 3](url)
 - [User-Story 4](url)
 - [User-Story 5](url)
+- You can find all classes and scource code from this project [here](SandBox/Source/SandBox)
 
 ## User-Story 1
 STORY: User would like a basic level with structures added for the player to navigate.
@@ -16,16 +17,13 @@ To achieve this I used UE5’s CubeGrid feature to quickly block out a level. Af
 
 
 ## User-Story 2
-You can find all classes and scource code written by me [here](SandBox/Source/SandBox)
-
-
 STORY: User would like a player in the level with a basic HUD.
 
-I started with creating the C++ Classes MyGameMode (Type: GameMode), GameHUD (Type: UserWidget) and MyPlayer (Type: Pawn). Then I created Blueprints derived from those classes (Prefixed with BP_).
+I started with creating the C++ Classes MyGameModeBase (Type: GameMode), MyGameHUD (Type: UserWidget) and MyPlayer (Type: Pawn). Then I created Blueprints derived from those classes (Prefixed with BP_).
 After that I set up the BP_MyGameMode to use the BP_Player pawn as default and to display the GameHUD. Then in the Project settings I set the gamemode to use BP_MyGameMode.
 
 
-Next I created a simple UI in the gameHUD:
+Next I created a simple UI in BP_gameHUD:
 
 
 After that I started working on MyPlayer class. I Added Colliders, a mesh and CameraComponents. I went for a simple cube as body because I wanted the game to feel simple and with cube like shapes. (Like the level design.)
