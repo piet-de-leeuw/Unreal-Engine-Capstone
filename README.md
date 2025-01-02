@@ -52,4 +52,32 @@ After that I implemented Jump. For that I setup an extra UboxComponent that list
 So now the player has a playable player with a basic HUD that can walk and jump to navigate the game world.
 
 
+## User-Story 3
+STORY: User would like obstacles and collectibles added throughout the level.
 
+I started with creating a health and damage system using Unreal’s build-in pain causing volume. This calls the Any-Damage Event when the players collision is overlapping the pain volume.
+
+I set up functions in the baseclass MyPlayer that I could call and implement in blueprints and implemented the system. I went with blueprint implementation for the lives and score because It doesn’t require heavy math and with blueprints it’s is easy to implement it quick. 
+When the player is damaged it calls the GameMode who is keeping track of the player lives. It updates the lives and calls a function on the GameHUD to update the HUD. The GameHUD Represents lives in the form of hearts images. I created spikes and added them to the pain volume as a visual representation.
+
+
+I let the GameMode keep track of lives and score so It is easy to keep track of it between different levels.
+
+
+For the score I implemented diamonds that you can pick up. At first I wanted to use overlap events on the diamond to call the logic for Updating the score and the HUD but then I realized that It was better to create an interface that is called from the player for interaction with objects because I want different objects to interact with the player on collision overlap that do different things.
+Every time the player collision overlaps another object this code is called.
+
+
+At last as obstacles I wanted the game to be 3D with 2D platformer like parts that you have to use in order to get to other parts of the level that you can’t reach otherwise.
+
+
+So I created those puzzles by making 2D like parts that are actual 3D but with very little depth. Then I created Entrance/Exit points (Derived from My2DModeSwitch class) that Implement the IInteract interface and toggle a 2d mode on the player, which shrink the player, lock movement in the forward direction and make sure the player starts in the same plane as the 2D Part.
+
+
+GIF???
+
+
+I let My2DModeSwitch call the Toggle2DMode function on the player because that logic modify the player directly.
+
+
+After that I placed the 2D parts the spikes and the diamonds in the level and played it a couple of times to ensure everything was working. Here I noticed that it was quite hart to make it to the end with just 3 hearts so I added 3 extra hearts which was easy to do. I only hat to add tree extra heart images add them to the array and set the Lives variable to match the number of hearts.
