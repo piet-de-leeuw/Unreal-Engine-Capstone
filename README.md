@@ -14,7 +14,11 @@ STORY: User would like a basic level with structures added for the player to nav
 
 To achieve this I used UE5’s CubeGrid feature to quickly block out a level. After that I added materials and foliage to make the level look nicer.
 
+![CubeGritLevel.png](Images/UserStory-1/CubeGritLevel.png)
 
+![CubeGritLevel1.png](Images/UserStory-1/CubeGritLevel1.png)
+
+![foliage.png](Images/UserStory-1/foliage.png)
 
 ## User-Story 2
 STORY: User would like a player in the level with a basic HUD.
@@ -22,32 +26,50 @@ STORY: User would like a player in the level with a basic HUD.
 I started with creating the C++ Classes MyGameModeBase (Type: GameMode), MyGameHUD (Type: UserWidget) and MyPlayer (Type: Pawn). Then I created Blueprints derived from those classes (Prefixed with BP_).
 After that I set up the BP_MyGameMode to use the BP_Player pawn as default and to display the GameHUD. Then in the Project settings I set the gamemode to use BP_MyGameMode.
 
+![Setup GameMode.png](Images/UserStory-2/Setup GameMode.png)
 
 Next I created a simple UI in BP_gameHUD:
 
+![UI.png](Images/UserStory-2/UI.png)
 
 After that I started working on MyPlayer class. I Added Colliders, a mesh and CameraComponents. I went for a simple cube as body because I wanted the game to feel simple and with cube like shapes. (Like the level design.)
 
+![Mesh-Camera-Collision_Properties.png](Images/UserStory-2/Mesh-Camera-Collision_Properties.png)
+
+![Mesh-Camera-Collision_Properties_cpp.png](Images/UserStory-2/Mesh-Camera-Collision_Properties_cpp.png)
 
 Then I started to set up the Enhanced Input System. I’m using the Enhanced Input System so it is easy to add more inputs for different action in the rest of the project. 
 I set up InputActions and InputMapping in the engine:
 
+![MovementMapping.png](Images/UserStory-2/MovementMapping.png)
+
 I Implemented the Enhanced Input System and added Action Bindings in the MyPlayer class: 
 
+![InputMapping-Actions_Proreties.png](Images/UserStory-2/InputMapping-Actions_Proreties.png)
 
+![subsystem.png](Images/UserStory-2/subsystem.png)
+
+![ActionBindings.png](Images/UserStory-2/ActionBindings.png)
 
 And Implemented the functions that are called by the different InputActions.
 For Move the user uses A, S, W, D or the arrow keys to move the player for/backwards and sideways without rotation:
 
+![Move.png](Images/UserStory-2/Move.png)
+
 For rotation I wanted the player and camera to automatically rotate 90° if they press E (clockwise) or Q (counterclockwise) rotating smoothly from the startpoint to the endpoint.
 UpdateRotation is called in Tick. The IsRotating bool makes sure rotation is only happening when it should.
 
+![UpdateRotate.png](Images/UserStory-2/UpdateRotate.png)
 
 Those two functions activate the UpdateRotation function and set the rotate direction:
 
+![RotateCW-CCW.png](Images/UserStory-2/RotateCW-CCW.png)
 
 After that I implemented Jump. For that I setup an extra UboxComponent that listens for Hit-Actions and placed it at the feet of the player so it triggers if it hits the floor, so I can stop the player from jumping while in the air:
 
+![HitLisener.png](Images/UserStory-2/HitLisener.png)
+
+![Jump.png](Images/UserStory-2/Jump.png)
 
 So now the player has a playable player with a basic HUD that can walk and jump to navigate the game world.
 
