@@ -81,3 +81,30 @@ I let My2DModeSwitch call the Toggle2DMode function on the player because that l
 
 
 After that I placed the 2D parts the spikes and the diamonds in the level and played it a couple of times to ensure everything was working. Here I noticed that it was quite hart to make it to the end with just 3 hearts so I added 3 extra hearts which was easy to do. I only hat to add tree extra heart images add them to the array and set the Lives variable to match the number of hearts.
+
+
+## User-Story 4
+STORY: User would like a Main Menu to access the game level and a Game Over/Victory screen where they can restart the game.
+
+So I Quickly Setup two UserWidgets derived from MyGameModeHUD and Set up the design. For the Victory and Game-over Menu I Use the same UserWidget class, because it uses the same buttons and logic. I then use a function (SetEndMenuText) to print the right title to the screen, and added the logic to print the right score in the End Menu.
+MAIN MENU:
+
+
+VICTORY MENU:
+
+
+GAME-OVER MENU:
+
+
+SetEndMenuText Function:
+
+
+LOGIC DISPLAYING SCORE:
+
+
+I used Blueprint implementation because I use the same function call to update the UI score in the End-Menus and the GameHUD (Displayed during gameplay.) and because Usewidgets are Quickly setup with Blueprints.
+
+
+## User-Story 5
+
+
