@@ -106,5 +106,23 @@ I used Blueprint implementation because I use the same function call to update t
 
 
 ## User-Story 5
+STORY: User would like to be able to play the whole game level from the main menu to the victory screen.
+
+To do that I needed a way to easy add/remove UserWidgets to/from the viewport.
+I first setup displaying the MainMenu at game start, enable the mouse so the player can click buttons and disable player movement so the player can’t move before the player clicked start. 
+I stored the player reference and some other references I need on BeginPlay in BP_MyGameMode:
 
 
+After That I set up a function to easily remove One UserWitget from viewport And display another.
+
+
+Then I added Logic for calling the End menu with game-over text (game-over text is set in SetEndMenutext function implemented in the last user-story):
+
+
+And for the End menu with Victory text. This one is Called if the winning condition is met, that is picking up the big diamond at the and of the tower.:
+
+
+At Last I Added the functionality to the Play, Replay and Quit buttons:
+
+After that I play tested the game a view times and adjusted some values to get a better experience (things like speed, jumpheight and amound of lives)
+and rounded up some details in the game design. With that I finished the project.
