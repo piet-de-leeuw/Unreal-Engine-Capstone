@@ -1,0 +1,35 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\pietd\\documents\\github\\unreal-engine-capstone\\sandbox\\intermediate\\build\\win64\\unrealgame\\inc\\sandbox\\uht\\mydiamond.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\pietd\\documents\\github\\unreal-engine-capstone\\sandbox\\intermediate\\build\\win64\\x64\\sandbox\\shipping\\engine\\sharedpch.engine.project.valapi.cpp20.inclorderunreal5_3.h.pch",
+        "Includes": [
+            "c:\\users\\pietd\\documents\\github\\unreal-engine-capstone\\sandbox\\intermediate\\build\\win64\\x64\\unrealgame\\shipping\\sandbox\\definitions.sandbox.h",
+            "c:\\users\\pietd\\documents\\github\\unreal-engine-capstone\\sandbox\\source\\sandbox\\mydiamond.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\components\\spherecomponent.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\components\\shapecomponent.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\shapecomponent.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\spherecomponent.generated.h",
+            "c:\\users\\pietd\\documents\\github\\unreal-engine-capstone\\sandbox\\source\\sandbox\\interact.h",
+            "c:\\users\\pietd\\documents\\github\\unreal-engine-capstone\\sandbox\\source\\sandbox\\myplayer.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\floatingpawnmovement.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\pawnmovementcomponent.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\navmovementcomponent.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\navmovementinterface.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\navmovementinterface.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\ai\\navigation\\pathfollowingagentinterface.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\pathfollowingagentinterface.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\movementcomponent.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\movementcomponent.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\navmovementcomponent.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\pawnmovementcomponent.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\floatingpawnmovement.generated.h",
+            "c:\\users\\pietd\\documents\\github\\unreal-engine-capstone\\sandbox\\intermediate\\build\\win64\\unrealgame\\inc\\sandbox\\uht\\myplayer.generated.h",
+            "c:\\users\\pietd\\documents\\github\\unreal-engine-capstone\\sandbox\\intermediate\\build\\win64\\unrealgame\\inc\\sandbox\\uht\\interact.generated.h",
+            "c:\\users\\pietd\\documents\\github\\unreal-engine-capstone\\sandbox\\intermediate\\build\\win64\\unrealgame\\inc\\sandbox\\uht\\mydiamond.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

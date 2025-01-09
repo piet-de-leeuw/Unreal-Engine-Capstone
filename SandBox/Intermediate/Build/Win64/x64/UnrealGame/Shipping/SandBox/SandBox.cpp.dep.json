@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\pietd\\documents\\github\\unreal-engine-capstone\\sandbox\\source\\sandbox\\sandbox.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\pietd\\documents\\github\\unreal-engine-capstone\\sandbox\\intermediate\\build\\win64\\x64\\sandbox\\shipping\\engine\\sharedpch.engine.project.valapi.cpp20.inclorderunreal5_3.h.pch",
+        "Includes": [
+            "c:\\users\\pietd\\documents\\github\\unreal-engine-capstone\\sandbox\\intermediate\\build\\win64\\x64\\unrealgame\\shipping\\sandbox\\definitions.sandbox.h",
+            "c:\\users\\pietd\\documents\\github\\unreal-engine-capstone\\sandbox\\source\\sandbox\\sandbox.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

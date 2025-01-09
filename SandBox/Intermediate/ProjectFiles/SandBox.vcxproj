@@ -255,7 +255,6 @@
     <None Include="..\..\.ignore"/>
     <None Include="..\..\.vsconfig"/>
     <None Include="..\..\Input Backup 2023-08-03 170723.ini"/>
-    <None Include="..\..\SandBox.code-workspace"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>
     <None Include="..\..\Config\DefaultGame.ini"/>

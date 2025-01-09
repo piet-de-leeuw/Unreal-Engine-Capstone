@@ -14,7 +14,6 @@
     <None Include="..\..\.ignore" />
     <None Include="..\..\.vsconfig" />
     <None Include="..\..\Input Backup 2023-08-03 170723.ini" />
-    <None Include="..\..\SandBox.code-workspace" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
