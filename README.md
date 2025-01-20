@@ -1,6 +1,6 @@
-# Unreal-Engine-Capstone
+# Unreal-Engine-Capstone (3D-Inbetween-2D)
 In this project I present the game that I made for [The Tech Academy](https://www.learncodinganywhere.com/) Game Developer Boot Camp.
-I was given tasks to complete in the form of user storys.
+I was given tasks to complete, in the form of user storys.
 
 You can download the game to try it [HERE](https://kolibrie.itch.io/3d-inbetween-2d) on Itch.io
 
