@@ -1,5 +1,5 @@
 # Unreal-Engine-Capstone
-In this project I present the game that I made as Capstone Project for the C++ and Unreale Engine Course from [The Tech Academy](https://www.learncodinganywhere.com/) Game Developer Boot Camp.
+In this project I present the game that I made for [The Tech Academy](https://www.learncodinganywhere.com/) Game Developer Boot Camp.
 The Project was setup to stimulate a real job project as much as possible. Therefor I was given tasks in the form of user storys.
 
 You can download the game to try it [HERE](https://kolibrie.itch.io/3d-inbetween-2d) on Itch.io
